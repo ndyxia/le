@@ -165,12 +165,12 @@ def inlinePrint(update, context):
 	tbook = bookDownload(url, lectulandia.antuploadUrl)
 	tbook.init()
 	chat_text = "{}\n{}\n{}".format(tbook.name, tbook.size, tbook.uploaded)
-	# proc_send_to_tel(user_id, chat_text)
+	proc_send_to_tel(user_id, chat_text)
 	tbook.download()
 	bot.edit_message_text(chat_id=user_id, message_id=toDelete.message_id, text="sending")
-	# bot.send_document(chat_id=user_id, document=open(file="./books/{}".format(tbook.name), mode="rb"), caption=chat_text, parse_mode="html")
+	bot.send_document(chat_id=user_id, document=open(file="./books/{}".format(tbook.name), mode="rb"), caption=chat_text, parse_mode="html")
 	bot.delete_message(chat_id=user_id, message_id=toDelete.message_id)
-	# unlink("./books/{}".format(tbook.name))
+	unlink("./books/{}".format(tbook.name))
 
 def proc_inline_query(update, context):
 	update.callback_query.answer()
