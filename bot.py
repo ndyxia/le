@@ -9,9 +9,9 @@ from langLoader import langLoad
 
 
 TELEGRAM_BOT_TOKEN = getenv("_TELEGRAM_BOT_TOKEN", "")
-print(f"VE -> {getenv('VE', '')")
-print(f"_VE -> {getenv('_VE', '')")
-print(f"__VE -> {getenv('__VE', '')")
+print(f"VE -> {getenv('VE', '')}")
+print(f"_VE -> {getenv('_VE', '')}")
+print(f"__VE -> {getenv('__VE', '')}")
 print(f"----------------------------- {TELEGRAM_BOT_TOKEN}------------------")
 
 lectulandia = Lectulandia_scraper()
