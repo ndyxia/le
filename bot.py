@@ -8,7 +8,7 @@ from lectulandia import Lectulandia_scraper, bookDownload
 from langLoader import langLoad
 
 
-TELEGRAM_BOT_TOKEN = getenv("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_BOT_TOKEN = getenv("_TELEGRAM_BOT_TOKEN", "")
 print(f"----------------------------- {TELEGRAM_BOT_TOKEN}------------------")
 
 lectulandia = Lectulandia_scraper()

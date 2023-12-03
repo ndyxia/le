@@ -1,4 +1,4 @@
 FROM archlinux:latest
 WORKDIR /app
-COPY . .
+COPY . /app
 RUN bash run.bash
