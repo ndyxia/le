@@ -9,6 +9,7 @@ from langLoader import langLoad
 
 
 TELEGRAM_BOT_TOKEN = getenv("TELEGRAM_BOT_TOKEN", "")
+print(f"----------------------------- {TELEGRAM_BOT_TOKEN}------------------")
 
 lectulandia = Lectulandia_scraper()
 
