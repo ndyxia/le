@@ -1,4 +1,4 @@
-pacman -Sy python python-venv python-pip git wget --noconfirm
+pacman -Sy python python-pip git wget --noconfirm
 python3 -m venv .env
 cd .env
 source bin/activate
