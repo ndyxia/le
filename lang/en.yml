@@ -1,0 +1,18 @@
+"books": "books: {}"
+"authors": "authors: {}"
+"comments": "comments: {}"
+"library_info": "library info"
+"weekly": "books more readed on week"
+"monthly": "books more readed on month"
+"lasts_books": "lasts books added"
+"load_more": "load more"
+
+
+
+
+
+
+"error_lib_info": "error: error getting the library info"
+"warning_not_found": "no found results for {}"
+"error_dont_fuck": "error: stop changing things 🤨"
+"error_find_length": "error: you must insert a word with at least 4 characters"

@@ -1,0 +1,7 @@
+python-telegram-bot==13.14
+cloudscraper
+lxml
+PyYAML
+requests
+pyjsparser
+wget

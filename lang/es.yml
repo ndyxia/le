@@ -1,0 +1,18 @@
+"books": "libros: {}"
+"authors": "autores: {}"
+"comments": "comentarios: {}"
+"library_info": "informacion de la biblioteca"
+"weekly": "libros mas leidos de la semana"
+"monthly": "libros mas leidos del mes"
+"lasts_books": "ultimos libros agregados"
+"load_more": "cargar mas"
+
+
+
+
+
+
+"error_lib_info": "error: error al obtener la informacion de la biblioteca"
+"warning_not_found": "no hay resultados para {}"
+"error_dont_fuck": "error: deja de cambiar cosas 🤨"
+"error_find_length": "error: ingrese una palabra de minimo 4 caracteres para buscar"
