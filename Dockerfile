@@ -3,4 +3,4 @@ WORKDIR /app
 COPY . /app
 RUN echo "echo ${VE} ${_VE} ${__VE}"
 RUN env
-RUN bash run.bash
+CMD bash run.bash
