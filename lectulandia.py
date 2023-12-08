@@ -48,7 +48,9 @@ class bookPage:
 
 		for element in pageTree.get_element_by_id("autor"):
 			if element.tag == "a":
-				self.authorList.append({"name": element.text, "url": element.attrib["href"]})
+				aurl = element.attrib["href"].removeprefix("/")
+				if not aurl.__contains__(LECTULANDIA_URL): aurl = f"{LECTULANDIA_URL}/{aurl}"
+				self.authorList.append({"name": element.text, "url": aurl})
 		if len(self.authorList) > 5: self.authorList = self.authorList[:4]
 
 		for element in pageTree.get_element_by_id("genero"):
