@@ -161,7 +161,7 @@ def inlinePrint(update, context):
 	user_id = update.callback_query.message.chat.id
 	toDelete = bot.send_message(chat_id=user_id, text="downloading")
 	mess_iid = update.callback_query.message.message_id
-	user_lang = update.message.from_user.language_code
+	user_lang = update.callback_query.message.from_user.language_code
 	data_lang = langLoad(user_lang)
 	# chat_text = update.callback_query.message.text
 	callback_data = update.callback_query.data
