@@ -161,6 +161,8 @@ def inlinePrint(update, context):
 	user_id = update.callback_query.message.chat.id
 	toDelete = bot.send_message(chat_id=user_id, text="downloading")
 	mess_iid = update.callback_query.message.message_id
+	user_lang = update.message.from_user.language_code
+	data_lang = langLoad(user_lang)
 	# chat_text = update.callback_query.message.text
 	callback_data = update.callback_query.data
 	print(callback_data)
@@ -168,8 +170,9 @@ def inlinePrint(update, context):
 	url = lectulandia.db_get_url(iid)
 	tbook = bookDownload(url, lectulandia.antuploadUrl)
 	tbook.init()
-	chat_text = "{}\n{}\n{}".format(tbook.name, tbook.size, tbook.uploaded)
-	proc_send_to_tel(user_id, chat_text)
+	chat_text = data_lang["uploaded"].format(tbook.uploaded)
+	# chat_text = "{}\n{}\n{}".format(tbook.name, tbook.size, tbook.uploaded)
+	# proc_send_to_tel(user_id, chat_text)
 	tbook.download()
 	bot.edit_message_text(chat_id=user_id, message_id=toDelete.message_id, text="sending")
 	bot.send_document(chat_id=user_id, document=open(file="./books/{}".format(tbook.name), mode="rb"), caption=chat_text, parse_mode="html")
