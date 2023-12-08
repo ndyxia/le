@@ -20,6 +20,7 @@ def runner(func, update, context):
 	Thread(None, func, args=(update, context)).run()
 
 def proc_send_to_tel(chat_iid, text, photo=None, parseMode="html", are_book=False, inlineK=None):
+	if not text: text = "VOID"
 	if photo is None:
 		rtext = ""
 		if len(text) > 4096:
